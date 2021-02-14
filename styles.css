@@ -1,0 +1,1004 @@
+/*
+font-family: 'Lato', 'Arial', sans-serif;
+font-family: 'Playfair Display', 'Garamond', serif;
+
+Colors: 
+Peach dark: #F2A277;
+Peach light: #EFB291;
+Beige: #F8EDE2;
+Brown light: #D37B4C;
+Brown dark: #792510;
+
+*/
+
+
+/* general
+--------------------------------------------------------*/
+html, body, div, h1, h2, h3, h4, p, a, em, img, strong,
+b, ul, li, form, label, article, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+ol, ul {
+	list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Lato', 'Arial', sans-serif;
+    color: #000;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+main {
+    width: 100vw;
+}
+h1, h2 {
+    font-size: 40px;
+    font-family: 'Playfair Display', 'Garamond', serif;
+    font-style: italic; 
+    line-height: 1.3;
+    color: #fff;
+    text-align: center;
+    margin: 30px 0;
+}
+h2 {
+    margin-top: -6px;
+    color: #000;
+}
+h4 {
+    font-weight: 700;
+    margin: 20px 0 10px;
+}
+a {
+    text-decoration: underline;
+    color: #fff;
+}
+a:hover {
+    text-decoration: none;
+}
+.black {
+    color: #000;
+}
+.white {
+    color: #fff;
+}
+strong {
+    font-weight: 700;
+}
+.italics {
+    font-style: italic;
+}
+.section-a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+section {
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 40px 20px 30px; 
+}
+article {
+    padding: 20px 0 10px;
+    text-align: center;
+}
+article p {
+    text-align: left;
+    line-height: 1.6;
+    margin: 20px 0 20px;
+    padding: 0 20px;
+}
+article img {
+    width: 100%; 
+    height: 500px;
+    object-fit: cover;
+    object-position: center center;
+}
+.image-text {
+    text-align: center;
+    margin-top: 5px; 
+    font-size: 12px;
+    color: #D37B4C;
+}
+.read-more {
+    padding: 10px 0;
+    text-decoration: underline;
+}
+.read-more:hover {
+    font-weight: 700;
+}
+.absolute {
+    position: absolute;
+    bottom: 30px;
+    left: 0; 
+    right: 0; 
+}
+.to-top {
+    display: none;
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    height: 48px;
+    padding: 10px;
+    z-index: 8;
+}
+.content-links {
+    display: block; 
+    color: #D37B4C;
+    text-align: center;
+    padding: 20px 0;
+}
+.back-home a {
+    display: block;
+    color: #D37B4C;
+    padding: 20px 20px 40px;
+    text-align: center;
+}
+.arrow-home {
+    display: inline-block;
+    margin: 0 0 -2px -25px;
+    padding: 10px 10px 0;
+    height: 0.9em;
+}
+
+/* header home
+--------------------------------------------------------*/
+.header {
+    position: relative;
+    height: 100vh;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.header-home {
+    background-image: url(images/girl-on-mars.jpg);
+}
+.nav-bar {
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: space-between;
+}
+.main-logo {
+    width: 78px;
+    height: 72px; 
+    padding: 10px;
+}
+/* navigation
+--------------------------------------------------------*/
+.hamburger-button {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+    z-index: 10;
+    height: 50px; 
+    width: 50px;
+    background-image: url(images/menu-icon.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-color: transparent;
+    border: none; 
+    outline: none;
+    cursor: pointer;
+}
+.menu {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden;
+    color: #fff;
+    background-color: #F2A277;
+    transform: translateY(-100%);
+    transition: transform 0.8s ease;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-bottom: 40px;
+    z-index: 9;
+}
+.close-menu {
+    background-image: url(images/close-menu.svg);
+}
+.open-menu {
+    transform: translateY(0);
+}
+.menu-logo {
+    height: 10vh;
+    
+    /*width: 67px;
+    height: 62px;*/
+}
+.menu ul {
+    height: 64vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.menu-links {
+    display: block;
+    font-weight: 700; 
+    text-transform: uppercase;
+    /*padding: 16px 20px; 
+    margin: 5px;*/
+    text-align: center;
+    letter-spacing: 5px;
+    text-decoration: none;
+    
+    /*height: 8vh;*/
+}
+.menu-links:hover {
+    color: #792510;
+}
+.active {
+    color: #792510;
+}
+.social-icons {
+    display: flex; 
+    flex-flow: row wrap; 
+    justify-content: space-around;
+    
+    height: 14vh;
+}
+.social-icons img {
+    width: 30px;
+    padding: 10px; 
+    margin-top: 20px;
+}
+.headline {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 0; 
+    right: 0; 
+    margin: 0 auto; 
+}
+.headline-home {
+    bottom: 0;
+}
+.tagline {
+    color: #fff;
+    text-align: center;
+}
+.arrow-down {
+    display: block;
+    text-align: center; 
+}
+.arrow-down img {
+    width: 24px;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* header other pages
+--------------------------------------------------------*/
+/*.header h1 {
+    position: absolute;
+    bottom: 30px; 
+    left: 0; 
+    right: 0; 
+    padding: 0 20px;
+}*/
+.new-life-header {
+    background-image: url(images/martian.jpg);
+}
+.why-header {
+    background-image: url(images/galaxy-mountain.jpg);
+}
+.when-header {
+    background-image: url(images/when.jpg);
+}
+.letter-header {
+    background-image: url(images/milkyway-header.jpg);
+}
+.history-header {
+    background-image: url(images/satellite-earth.jpg);
+    background-position: right center;
+}
+
+/* main content home page
+--------------------------------------------------------*/
+.background {
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    position: relative;
+}
+.new-life {
+    background-color: #F8EDE2;
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.new-life h3 {
+    text-transform: uppercase;
+}
+.why {
+    position: relative;
+    background-image: url(images/astronaut);
+    background-position: right bottom;
+}
+.why h2 {
+    font-size: 50px;
+}
+.asteroids {
+    background-image: url(images/mars-man.jpg);
+}
+.asteroid-text {
+    text-shadow: 0 0 10px #3b0900;
+}
+.cradle-quote {
+    text-align: left;
+    background-image: url(images/earth-space.jpg);
+}
+.quote {
+    font-family: 'Playfair Display', 'Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.6; 
+    margin: 60px 0;
+}
+.when {
+    background-image: url(images/spacex-launch.jpg);
+    background-position: right bottom;
+}
+.history {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    background-color: #F8EDE2;
+}
+.history img {
+    width: 84%;
+    margin: auto;
+}
+.bullet-point {
+    margin-bottom: 20px;
+}
+.letter {
+    background-image: url(images/planet.jpg);
+    background-position: left bottom;
+}
+.limit-quote {
+    text-align: left;
+    background-image: url(images/spacex-satellite.jpg);
+}
+.mm-quote {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+}
+
+/* asteroid API call
+--------------------------------------------------------*/
+.asteroid-container {
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    background-color: rgb(0,0,0,0.8);
+    margin: 60px auto 0; 
+    color: #fff;
+    padding: 20px 10px;
+    line-height: 1.6;
+}
+.asteroid-container ul {
+    padding-left: 20px;
+}
+.asteroid-container li {
+    list-style-type: disc;
+    text-align: left;
+    margin: 20px auto;
+}
+.loader {
+    width: 30px;
+    height: 30px;
+    margin: 60px auto;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-top: 2px solid #F2A277;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(720deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(720deg); }
+}
+.api-error {
+    margin: 40px 0;
+}
+
+
+/* main content other pages
+--------------------------------------------------------*/
+.list-menu {
+    text-align: center;
+    line-height: 2;
+}
+.list-menu a {
+    display: block;
+    padding: 10px;
+    color: #000;
+    font-weight: 700;
+}
+.letter-content {
+    padding: 0 40px;
+    list-style-type: disc;
+    line-height: 1.6;
+    text-align: left;
+}
+.letter-content li {
+    margin: 10px 0;
+}
+.letter-div {
+    background-color: #F8EDE2;
+    padding: 40px 0;
+}
+.letter-div h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+}/*
+.sort-button {
+    display: block;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    background-color: #F2A277;
+    color: #fff;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+}
+.sort-button:hover {
+    color: #792510;
+}*/
+.sort-button {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    /*margin: 100px auto 0;*/
+    margin: 40px auto 10px;
+    padding: 20px;
+    width: 200px;
+    background-color: #90321b;
+    border-radius: 30px;
+    color: #fff;
+    border: none;
+    outline: none; 
+    cursor: pointer;
+}
+.sort-button:hover {
+    background-color: #ad3416;
+}
+
+
+
+.display {
+    display: none;
+}
+.category-button {
+    display: block;
+    padding: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+    color: #F2A277;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.category-button:hover {
+    color: #792510;
+}
+
+
+
+/* footer
+--------------------------------------------------------*/
+footer {
+    background-color: #EFB291;
+    text-align: left;
+}
+.footer-logo {
+    text-align: center;
+    padding-top: 20px;
+}
+footer h2 {
+    text-align: left;
+}
+.footer-section {
+    padding: 50px 20px;
+}
+.social-icons .footer-icon {
+    margin: 0 0 40px;
+}
+.header-photo {
+    color: #b75b39;
+    font-style: italic;
+    }
+#headerphoto-desktop {
+    display: none;
+}
+.bottom {
+    text-align: center;
+    margin: 0 auto;
+}
+.priv-policy {
+    display: block;
+    margin: 10px 0;
+}
+
+/* contact form
+--------------------------------------------------------*/
+.form-div {
+    margin-bottom: 40px;
+}
+label {
+    display: block;
+    font-weight: 700;/*
+    padding-top: 30px;*/
+}
+input, 
+textarea {
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 10px;
+    color: #000; 
+    background-color: #fff;
+    border: 1px solid #F2A277;
+    border-radius: 10px;
+    outline: none;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-size: 16px;
+}
+input {
+    height: 2.5em;
+    width: 70%;
+}
+textarea {
+    height: 140px;
+    width: 100%;
+}
+.form-error {
+    display: none;
+    line-height: 2;
+    color: #954419;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto 0;
+    padding: 14px;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    width: 160px;
+    background-color: #b75b39;
+    color: #fff;
+    border: none; 
+    border-radius: 10px;
+    outline: none;
+}
+.submit:hover {
+    background-color: #aa411a;
+}
+.success-message {
+    line-height: 2;
+}
+
+
+/* media queries
+--------------------------------------------------------*/
+@media all and (min-width: 480px) {
+    /*-- MAIN CONTENT --*/
+    section {
+        padding: 40px 40px 30px;
+    }
+    article p {
+        width: 80%;
+        margin: 20px auto;
+    }
+    article img {
+        box-sizing: border-box;
+        max-width: 400px;
+    }
+    .fit-top {
+        object-position: top center;
+    }
+    .fit-bottom {
+        object-position: bottom center;
+    }
+    .asteroid-container {
+        width: 80%;
+    }
+    .history-pattern {
+        max-width: 340px;
+    }
+    .letter-content {
+        max-width: 80%; 
+        box-sizing: border-box;
+        margin: 40px auto; 
+        padding: 0 40px;
+    }
+    .letter-div p {
+        max-width: 80%;
+        margin: 20px auto;
+    }
+    /*-- FOOTER --*/
+    .footer-columns {
+        max-width: 70%;
+        margin: 0 auto;
+        display: flex; 
+        flex-direction: column; 
+    }
+    .footer-section {
+        box-sizing: border-box;
+        padding: 40px 20px;
+    }
+    .form-container {
+        max-width: 440px;
+    }
+    footer .social-icons {
+        justify-content: flex-start;
+    }
+    .social-icons .footer-icon {
+        padding: 10px 60px 10px 0;
+    }
+}
+
+@media all and (min-width: 750px) {
+    /*-- NEW HEADERS --*/
+    .header {
+        height: 750px;
+    }
+    .header-home {
+        background-image: url(images/girl-on-mars-l.jpg);
+        background-position: top center;
+    }
+    .new-life-header {
+        background-image: url(images/header-newlife-desktop.jpg);
+    }
+    .why-header {
+        background-image: url(images/galaxy-mountain-desktop.jpg);
+    }
+    .when-header {
+        background-image: url(images/when-desktop.jpg);
+    }
+    .history-header {
+        background-image: url(images/satellite-earth-desktop.jpg);
+    }
+    .letter-header {
+        background-image: url(images/milkyway-header-destop.jpg);
+    }
+    /*-- MENU --*/
+    .menu {
+        height: 750px;
+    }
+    .menu-logo {
+    height: 90px;
+
+    }
+    .menu-links {
+        height: 1em;
+        padding: 20px;
+    }
+    .social-icons {
+        height: 90px;
+    }
+    
+    /*-- HOME PAGE --*/
+    .home-flex {
+        display: flex;
+        flex-flow: row wrap; 
+        justify-content: center;    
+    }
+    .home-flex section {
+        box-sizing: border-box;
+        height: 750px; 
+        width: 50vw;  
+    }
+    /*-- MAIN CONTENT --*/
+    article p,
+    .letter-content,
+    .letter-div p {
+        width: 70%;
+    }
+    article img {
+        height: 600px;
+    }
+    /*--IMG BACKGROUNDS--*/
+    .img-background {
+        width: 100%; 
+        height: 600px;
+        background-size: cover; 
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: 40px;
+    }
+    .why-main .img-background {
+        margin-top: 0;
+    }
+    .margin-bottom {
+        margin-bottom: 40px;
+    }
+    .starship-background {
+        background-image: url(images/starship-background.jpg);
+    }
+    .plant-background {
+        background-image: url(images/mars-plant-background.jpg);
+    }
+    .green-background {
+        background-image: url(images/green-astronaut-background.jpg);
+    }
+    .inspace-background {
+        background-image: url(images/astronaut-in-space-background.jpg);
+    }
+    .city-background {
+        background-image: url(images/city-background.jpg);
+    }
+    .glassball-background {
+        background-image: url(images/glass-ball-background.jpg);
+    }
+    .supernova-background {
+        background-image: url(images/supernova-background.jpg);
+    }
+    .asteroid-background {
+        background-image: url(images/asteroid-background.jpg);
+    }
+    .blackhole-background {
+        background-image: url(images/black-hole-background.jpg);
+    }
+    .aurora-background {
+        background-image: url(images/aurora-background.jpg);
+    }
+    .nasa-background {
+        background-image: url(images/nasa-background.jpg);
+    }
+    .helmet-background {
+        background-image: url(images/helmet-background.jpg);
+    }
+    .launch2-background {
+        background-image: url(images/spacex-launch2-background.jpg);
+    }
+    .martian2-background {
+        background-image: url(images/martian2-background.jpg);
+    }
+}
+
+ 
+@media all and (min-width: 1000px) {
+    /*-- HEADER --*/
+    .header {
+        height: 600px;
+    }
+    .header-home {
+        background-image: url(images/header-home-desktop.jpg);
+        background-position: bottom center;
+    }
+    .headline-home {
+        top: 100px;
+    }
+    h1 {
+        font-size: 64px;
+        text-shadow: 0 0 1px #000;
+    }
+    .tagline {
+        font-size: 22px; 
+    }
+    .arrow-down {
+        display: none;
+    }
+    /*-- MENU --*/
+    .main-logo {
+        padding: 10px;
+    }
+    .menu {
+        position: absolute;
+        top: 600px;
+        transform: none; 
+        transition: none;
+        height: 75px; 
+        /*display: flex;
+        align-items: center;*/
+        
+        flex-direction: row;
+        padding: 0;
+    }
+    .menu ul {
+        flex-flow: row;
+        width: 100%;
+        height: 100%;
+    }
+    .menu-links {
+        font-size: 12.5px;
+        padding: 30px 0; 
+        margin: 0;
+    }
+    .hamburger-button {
+        display: none;
+    }
+    .menu-logo {
+        display: none;
+    }
+    .menu .social-icons {
+        display: none; 
+    }
+    /*-- HOME PAGE --*/
+    body {
+        font-size: 18px;
+    }
+    main {
+        margin-top: 75px;
+    }
+    .home-flex section {
+        width: 49vw;
+        margin: 8px 4px;
+    }
+    .asteroids {
+        background-image: url(images/girl-on-mars.jpg);
+        background-position: top center;
+    }
+    /*-- MAIN CONTENT OTHER PAGES --*/
+    main article:first-of-type {
+        padding-top: 40px;
+    }
+    article p,
+    .letter-content,
+    .letter-div p {
+        max-width: 610px;
+    }
+    article img {
+        max-width: 700px;
+    }
+    .image-text {
+        font-size: 13px;
+    }
+    .sort-button {
+        margin: 115px auto 0;
+        /*padding: 20px;
+        width: 200px;
+        background-color: #90321b;
+        border-radius: 10px;
+        color: #fff;*/
+    }
+    /*.sort-button:hover {
+        background-color: #792510;
+        color: #fff;
+    }*/
+    .letter-img {
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
+        padding: 2px;
+    }
+    .letter-img div {
+        box-sizing: border-box;
+        padding: 4px;
+    }
+    .letter-div {
+        margin: 40px 0;
+    }
+    /*--  FOOTER  --*/
+    .footer-columns {
+        max-width: 100%;
+        padding-left: 40px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .footer-section {
+        width: 32vw;
+    }
+    #headerphoto-desktop {
+        display: block;
+    }
+    #headerphoto-mobile {
+        display: none;
+    }
+    
+}
+
+
+
+@media all and (min-width: 1300px) {
+    /*-- MAIN CONTENT--*/
+    .home-flex section {
+        width: 32.5vw;
+        margin: 8px 4px 4px;
+    }
+    #cradle-quote {
+        width: 100vw;
+        margin: 4px 0;
+        padding-left: 60px;
+        background-image: url(images/earth-space-desktop.jpg);
+    }
+    #limit-quote {
+        width: 100vw;
+        margin: 4px 0 8px;
+        padding-left: 60px;
+        background-image: url(images/spacex-satellite-desktop.jpg);
+        background-position: center center;
+    }
+    .quote {
+        position: absolute;
+        top: 250px;
+    }
+    .quoted {
+        position: absolute;
+        bottom: 40px;
+    }
+    .mm-quote {
+        position: relative;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+@media all and (min-width: 1700px) {
+    /*-- MAIN CONTENT --*/
+    main {
+        width: 1644px;
+        margin: 75px auto 0;
+    }
+    .menu ul {
+        width: 1644px;
+        margin: 0 auto;
+    }
+    /*-- HOME PAGE --*/
+    .home-flex section {
+        width: 540px;
+    }
+    #cradle-quote, 
+    #limit-quote {
+        margin: 4px;
+    }
+    /*-- FOOTER --*/
+    .footer-columns {
+        justify-content: center;
+    }
+    .footer-section {
+        width: 540px;
+    }
+
+}
+
+
+
+
+
+
+
