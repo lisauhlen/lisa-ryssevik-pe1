@@ -27,7 +27,6 @@ const nameArray3 = [
 ];
 
 
-
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
 var mm = String(today.getMonth() + 1).padStart(2, '0');
@@ -58,7 +57,6 @@ async function fetchObjects() {
     }
 }
 fetchObjects();
-
 
 
 function objectsHtml(objects) {
@@ -93,22 +91,6 @@ function objectsHtml(objects) {
                                     <li><strong>${randomName2}</strong> ${obj[1].name}, is ${diameter1} m wide, and <strong>${distance1}</strong> from Earth today.</li>
                                     <li>Lastly, we have <strong>${randomName3}</strong> ${obj[2].name}. It's ${diameter2} m wide and passing <strong>${distance2}</strong> away.</li>
     `;
-
-
-    // for (let i = 0; i < obj.length; i++) {
-
-    //     if (i === 3) { 
-    //         break; 
-    //     }
-
-    //     const diameter = Math.round(obj[i].estimated_diameter.meters.estimated_diameter_max);
-    //     const distance = Math.round(obj[i].close_approach_data[0].miss_distance.kilometers / 1000000);
-
-    //     objectContainer.innerHTML += `<li><strong>${obj[i].name}</strong> has a diameter of <strong>${diameter}m</strong> and is <strong>${distance} mill km</strong> from Earth.</li>
-    //                                 `;
-
-    // }
-
 };
 
 function sortObj(obj) {

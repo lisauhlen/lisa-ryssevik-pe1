@@ -217,9 +217,6 @@ article img {
 }
 .menu-logo {
     height: 10vh;
-    
-    /*width: 67px;
-    height: 62px;*/
 }
 .menu ul {
     height: 64vh;
@@ -231,13 +228,9 @@ article img {
     display: block;
     font-weight: 700; 
     text-transform: uppercase;
-    /*padding: 16px 20px; 
-    margin: 5px;*/
     text-align: center;
     letter-spacing: 5px;
     text-decoration: none;
-    
-    /*height: 8vh;*/
 }
 .menu-links:hover {
     color: #792510;
@@ -249,7 +242,6 @@ article img {
     display: flex; 
     flex-flow: row wrap; 
     justify-content: space-around;
-    
     height: 14vh;
 }
 .social-icons img {
@@ -284,13 +276,6 @@ article img {
 
 /* header other pages
 --------------------------------------------------------*/
-/*.header h1 {
-    position: absolute;
-    bottom: 30px; 
-    left: 0; 
-    right: 0; 
-    padding: 0 20px;
-}*/
 .new-life-header {
     background-image: url(images/martian.jpg);
 }
@@ -409,16 +394,15 @@ article img {
     border-radius: 50%;
     border: 2px solid #fff;
     border-top: 2px solid #F2A277;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
+    -webkit-animation: spin 2s linear infinite; 
+    /* Safari */
     animation: spin 2s linear infinite;
 }
-
 /* Safari */
 @-webkit-keyframes spin {
     0% { -webkit-transform: rotate(0deg); }
     100% { -webkit-transform: rotate(720deg); }
 }
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(720deg); }
@@ -426,7 +410,6 @@ article img {
 .api-error {
     margin: 40px 0;
 }
-
 
 /* main content other pages
 --------------------------------------------------------*/
@@ -456,26 +439,7 @@ article img {
 .letter-div h3 {
     text-transform: uppercase;
     font-weight: 700;
-}/*
-.sort-button {
-    display: block;
-    padding: 24px;
-    width: 100%;
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-size: 12.5px;
-    font-weight: 700;
-    letter-spacing: 5px;
-    background-color: #F2A277;
-    color: #fff;
-    border: none;
-    outline: none; 
-    cursor: pointer;
 }
-.sort-button:hover {
-    color: #792510;
-}*/
 .sort-button {
     display: block;
     text-align: center;
@@ -484,7 +448,6 @@ article img {
     font-size: 12.5px;
     font-weight: 700;
     letter-spacing: 5px;
-    /*margin: 100px auto 0;*/
     margin: 40px auto 10px;
     padding: 20px;
     width: 200px;
@@ -498,9 +461,6 @@ article img {
 .sort-button:hover {
     background-color: #ad3416;
 }
-
-
-
 .display {
     display: none;
 }
@@ -521,8 +481,6 @@ article img {
 .category-button:hover {
     color: #792510;
 }
-
-
 
 /* footer
 --------------------------------------------------------*/
@@ -566,8 +524,7 @@ footer h2 {
 }
 label {
     display: block;
-    font-weight: 700;/*
-    padding-top: 30px;*/
+    font-weight: 700;
 }
 input, 
 textarea {
@@ -619,7 +576,6 @@ textarea {
 .success-message {
     line-height: 2;
 }
-
 
 /* media queries
 --------------------------------------------------------*/
@@ -798,7 +754,6 @@ textarea {
         background-image: url(images/martian2-background.jpg);
     }
 }
-
  
 @media all and (min-width: 1000px) {
     /*-- HEADER --*/
@@ -832,9 +787,6 @@ textarea {
         transform: none; 
         transition: none;
         height: 75px; 
-        /*display: flex;
-        align-items: center;*/
-        
         flex-direction: row;
         padding: 0;
     }
@@ -889,16 +841,7 @@ textarea {
     }
     .sort-button {
         margin: 115px auto 0;
-        /*padding: 20px;
-        width: 200px;
-        background-color: #90321b;
-        border-radius: 10px;
-        color: #fff;*/
     }
-    /*.sort-button:hover {
-        background-color: #792510;
-        color: #fff;
-    }*/
     .letter-img {
         display: flex; 
         flex-direction: row;
@@ -928,10 +871,7 @@ textarea {
     #headerphoto-mobile {
         display: none;
     }
-    
 }
-
-
 
 @media all and (min-width: 1300px) {
     /*-- MAIN CONTENT--*/
@@ -993,12 +933,4 @@ textarea {
     .footer-section {
         width: 540px;
     }
-
 }
-
-
-
-
-
-
-
